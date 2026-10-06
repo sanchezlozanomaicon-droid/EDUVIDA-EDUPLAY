@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVida | Nosotros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #102a43;
+      --muted: #526579;
+      --green: #0f766e;
+      --mint: #dff8ec;
+      --yellow: #ffd166;
+      --paper: #f7fbf8;
+      --white: #ffffff;
+      --shadow: rgba(16, 42, 67, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(143, 227, 179, 0.55), transparent 22%),
+        radial-gradient(circle at 90% 85%, rgba(255, 209, 102, 0.35), transparent 28%),
+        var(--paper);
+    }
+
+    a { text-decoration: none; }
+
+    header, main, footer {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--ink);
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--green), #34d399);
+      color: var(--white);
+      font-size: 1.2rem;
+      box-shadow: 0 10px 20px rgba(15, 118, 110, 0.2);
+    }
+
+    .top-link {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    main {
+      padding: 2.5rem 0 4rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    h1 {
+      max-width: 700px;
+      font-size: clamp(2.6rem, 5vw, 5.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-top: 0.7rem;
+    }
+
+    .intro {
+      max-width: 640px;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .mini-card {
+      padding: 1.3rem;
+      border: 1px solid rgba(16, 42, 67, 0.08);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 18px 45px var(--shadow);
+    }
+
+    .mini-card strong {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--green);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+
+    .member {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border: 1px solid rgba(16, 42, 67, 0.08);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 18px 35px var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .member:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 45px rgba(16, 42, 67, 0.1);
+    }
+
+    .pixel-art {
+      display: grid;
+      place-items: center;
+      height: 170px;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+      border: 3px solid rgba(16, 42, 67, 0.08);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(16, 42, 67, 0.7);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.06)),
+        repeating-linear-gradient(
+          0deg,
+          rgba(16,42,67,0.05),
+          rgba(16,42,67,0.05) 8px,
+          rgba(255,255,255,0.0) 8px,
+          rgba(255,255,255,0.0) 16px
+        );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pixel-art::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border-radius: 12px;
+      border: 2px dashed rgba(16, 42, 67, 0.15);
+    }
+
+    .pixel-art span {
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.7);
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .art-1 { background-color: #dff8ec; }
+    .art-2 { background-color: #fff1b8; }
+    .art-3 { background-color: #dfe7ff; }
+    .art-4 { background-color: #e6f4ff; }
+
+    .role {
+      margin-bottom: 0.55rem;
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .member h3 {
+      font-size: 1.28rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .member p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .note {
+      margin-top: 2.25rem;
+      padding: 1.3rem 1.4rem;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ffe7a3, #ffd166);
+      border: 1px solid rgba(16, 42, 67, 0.05);
+      color: var(--ink);
+      line-height: 1.7;
+      box-shadow: 0 16px 30px rgba(255, 209, 102, 0.22);
+    }
+
+    .values {
+      margin-top: 3.25rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .value-card {
+      padding: 1.2rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(16, 42, 67, 0.08);
+    }
+
+    .value-card .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 12px;
+      background: var(--mint);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .value-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 0 0 2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .team {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      header, main, footer {
+        width: min(100% - 1.2rem, 1120px);
+      }
+
+      header {
+        flex-wrap: wrap;
+      }
+
+      .team {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="home.html"><span class="mark">♥</span> EduVida</a>
+    <a class="top-link" href="informacion-companero.html">Ver información →</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Nuestro equipo</span>
+        <h1>Cuatro ideas, un mismo propósito.</h1>
+        <p class="intro">Somos un grupo de estudiantes comprometidos con transformar temas importantes en una experiencia cercana, clara y útil para la vida diaria. EduVida nace para acompañar a las personas en decisiones sobre salud, autocuidado y proyecto de vida.</p>
+      </div>
+
+      <aside class="mini-card" aria-label="Resumen del proyecto">
+        <strong>EduVida</strong>
+        <p>Una propuesta educativa pensada para aprender jugando, promover hábitos saludables y fortalecer la reflexión sobre el cuidado personal y el futuro.</p>
+      </aside>
+    </section>
+
+    <section class="team" aria-label="Integrantes del equipo">
+      <article class="member">
+        <div class="pixel-art art-1" aria-label="Pixel art del integrante 1"><span>Pixel Art</span></div>
+        <span class="role">Investigación</span>
+        <h3>Jose</h3>
+        <p>Encargado de la investigación, la organización del contenido y la parte educativa del proyecto.</p>
+      </article>
+
+      <article class="member">
+        <div class="pixel-art art-2" aria-label="Pixel art del integrante 2"><span>Pixel Art</span></div>
+        <span class="role">Diseño</span>
+        <h3>Carlos</h3>
+        <p>Responsable de la identidad visual, la presentación del tema y la creatividad de la propuesta.</p>
+      </article>
+
+      <article class="member">
+        <div class="pixel-art art-3" aria-label="Pixel art del integrante 3"><span>Pixel Art</span></div>
+        <span class="role">Desarrollo</span>
+        <h3>Maicon</h3>
+        <p>Se enfocó en la experiencia interactiva y la construcción del sistema de juego.</p>
+      </article>
+
+      <article class="member">
+        <div class="pixel-art art-4" aria-label="Pixel art del integrante 4"><span>Pixel Art</span></div>
+        <span class="role">Validación</span>
+        <h3>Luciana</h3>
+        <p>Revisión, pruebas y apoyo para mejorar la claridad y la calidad del contenido.</p>
+      </article>
+    </section>
+
+    <div class="note">
+      <strong>Trabajamos en equipo:</strong> cada integrante aportó ideas, creatividad y esfuerzo para construir EduVida y generar conciencia sobre la salud, el autocuidado y la construcción de un proyecto de vida responsable.
+    </div>
+
+    <section class="values" aria-label="Valores del proyecto">
+      <article class="value-card">
+        <div class="icon">❤</div>
+        <h3>Salud</h3>
+        <p>Promovemos hábitos de cuidado, salud mental y bienestar en la vida diaria.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="icon">★</div>
+        <h3>Educación</h3>
+        <p>Transformamos conceptos importantes en contenido claro, útil y accesible para jóvenes.</p>
+      </article>
+
+      <article class="value-card">
+        <div class="icon">✦</div>
+        <h3>Proyecto de vida</h3>
+        <p>Incentivamos la reflexión, la toma de decisiones y la construcción de metas con responsabilidad.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>EduVida · Hecho por nuestro equipo</footer>
+</body>
+</html>
+

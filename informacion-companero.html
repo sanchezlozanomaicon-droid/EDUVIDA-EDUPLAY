@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduVida | Información del proyecto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#102a43; --muted:#526579; --green:#0f766e; --mint:#dff8ec; --yellow:#ffd166; --paper:#f7fbf8; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); font-family:"DM Sans",sans-serif; background:radial-gradient(circle at 90% 10%,#c9f4e1,transparent 30%),var(--paper); }
+    header,main,footer { width:min(1100px,calc(100% - 3rem)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 0; }
+    header a { color:var(--green); text-decoration:none; font-weight:700; }
+    .brand { display:flex; align-items:center; gap:.7rem; font-family:"Space Grotesk",sans-serif; font-size:1.15rem; }
+    .mark { display:grid; place-items:center; width:2.7rem; height:2.7rem; border-radius:13px; color:white; background:var(--green); }
+    main { padding:4rem 0 5rem; }
+    .eyebrow { color:var(--green); font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2 { font-family:"Space Grotesk",sans-serif; }
+    h1 { max-width:760px; margin:.8rem 0 1.2rem; font-size:clamp(2.8rem,7vw,5.8rem); line-height:.98; letter-spacing:-.04em; }
+    .intro { max-width:690px; color:var(--muted); font-size:1.12rem; line-height:1.7; }
+    .section-title { margin:4rem 0 1.4rem; font-size:2rem; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .card { padding:1.5rem; border:1px solid rgba(16,42,67,.1); border-radius:16px; background:rgba(255,255,255,.82); box-shadow:0 15px 35px rgba(16,42,67,.07); }
+    .card strong { display:block; margin-bottom:.6rem; font-family:"Space Grotesk",sans-serif; font-size:1.15rem; }
+    .card p { margin:0; color:var(--muted); line-height:1.6; }
+    .number { display:grid; place-items:center; width:2.3rem; height:2.3rem; margin-bottom:1.5rem; border-radius:9px; color:var(--green); background:var(--mint); font-weight:700; }
+    .purpose { display:grid; grid-template-columns:1.2fr .8fr; gap:1.5rem; margin-top:1.5rem; }
+    .purpose-main { padding:2rem; border-radius:18px; color:white; background:var(--green); }
+    .purpose-main h2 { margin-top:0; font-size:2rem; }
+    .purpose-main p { color:#dff8ec; line-height:1.7; }
+    .quote { display:flex; align-items:center; padding:2rem; border-radius:18px; background:var(--yellow); font-family:"Space Grotesk",sans-serif; font-size:1.35rem; line-height:1.35; }
+    footer { padding:0 0 2rem; color:var(--muted); font-size:.9rem; }
+    @media (max-width:760px) { header,main,footer { width:min(100% - 2rem,1100px); } .grid,.purpose { grid-template-columns:1fr; } main { padding-top:2.5rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="home.html"><span class="mark">♥</span> EduVida</a>
+    <a href="index.html">Abrir experiencia →</a>
+  </header>
+  <main>
+    <span class="eyebrow">Información del proyecto</span>
+    <h1>Aprender a cuidarnos también es construir nuestro futuro.</h1>
+    <p class="intro">EduVida es una propuesta educativa interactiva que combina información clara, reflexión y juegos para hablar sobre salud reproductiva, higiene, autocuidado y proyecto de vida.</p>
+    <h2 class="section-title">¿Qué trabajamos?</h2>
+    <section class="grid" aria-label="Temas del proyecto">
+      <article class="card"><span class="number">01</span><strong>Higiene y autocuidado</strong><p>Hábitos diarios, higiene de manos, cuidado corporal y prevención de infecciones.</p></article>
+      <article class="card"><span class="number">02</span><strong>Salud reproductiva</strong><p>Decisiones responsables, métodos de protección, consentimiento y prevención de ITS.</p></article>
+      <article class="card"><span class="number">03</span><strong>Proyecto de vida</strong><p>Metas personales y académicas para tomar decisiones con autonomía y responsabilidad.</p></article>
+    </section>
+    <section class="purpose" aria-label="Propósito de EduVida">
+      <article class="purpose-main"><h2>Nuestro propósito</h2><p>Crear un espacio seguro y dinámico donde los estudiantes puedan aprender, resolver dudas y fortalecer sus decisiones para el presente y el futuro.</p></article>
+      <div class="quote">“La información nos da herramientas; las decisiones responsables nos ayudan a avanzar.”</div>
+    </section>
+    <h2 class="section-title">¿Cómo se aprende?</h2>
+    <section class="grid" aria-label="Metodología">
+      <article class="card"><strong>Explora</strong><p>Lee conceptos sencillos y conoce situaciones cercanas a la vida diaria.</p></article>
+      <article class="card"><strong>Juega</strong><p>Responde retos, supera minijuegos y pon a prueba lo aprendido.</p></article>
+      <article class="card"><strong>Reflexiona</strong><p>Relaciona cada aprendizaje con tus metas, tu bienestar y tus decisiones.</p></article>
+    </section>
+  </main>
+  <footer>EduVida · Educación para el autocuidado y el proyecto de vida</footer>
+</body>
+</html>
